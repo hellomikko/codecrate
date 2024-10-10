@@ -1,11 +1,12 @@
 <div align="center">
-  <img src="https://github.com/hellomikko/codecrate/blob/main/public/ccColor.png" alt="CodeCrate Logo" width="100" height="100">
+  <img src="https://github.com/hellomikko/codecrate/raw/main/public/ccColor.png" alt="CodeCrate Logo" width="100" height="100">
 </div>
 
-<h1 align="center">
-  <span style="color:#60A5FA;">Code</span> and <span style="color:#4ADE80;">collaborate</span> in real-time,<br>
-  <span style="color:#FBBF24;">build amazing projects</span>
-</h1>
+<h1 align="center">CodeCrate</h1>
+
+<p align="center">
+  <strong>Code and collaborate in real-time, build amazing projects</strong>
+</p>
 
 <p align="center">
   CodeCrate is an online community for testing and showcasing HTML, CSS, and JavaScript code snippets.<br>
@@ -20,22 +21,22 @@
 <br>
 
 <div align="center">
-  <img src="https://github.com/hellomikko/codecrate/blob/main/public/mock_editor.svg" alt="Code Snippet" width="1000">
+  <img src="https://github.com/hellomikko/codecrate/raw/main/public/code-snippet-example.png" alt="Code Snippet Example" width="600">
 </div>
 
 ## Features
 
-- Real-time collaboration
-- Code snippet sharing
-- Syntax highlighting
-- Version control integration
-- Community-driven learning
+- 🚀 Real-time collaboration
+- 📦 Code snippet sharing (Crates)
+- 🌈 Syntax highlighting
+- 🔄 Version control integration
+- 🤝 Community-driven learning
 
 ## Quick Start
 
 1. Clone the repository:
    ```
-   git clone https://github.com/your-username/codecrate.git
+   git clone https://github.com/hellomikko/codecrate.git
    ```
 
 2. Install dependencies:
@@ -50,6 +51,15 @@
    ```
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Tech Stack
+
+- [Next.js](https://nextjs.org/)
+- [React](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Prisma](https://www.prisma.io/)
+- [Vercel](https://vercel.com/)
 
 ## Contributing
 
