@@ -1,10 +1,14 @@
-"use client"
-
+import { Metadata } from 'next'
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Code, Settings, User } from "lucide-react"
+
+export const metadata: Metadata = {
+  title: 'Dashboard | CodeCrate',
+  description: 'View your CodeCrate dashboard',
+}
 
 export default function DashboardPage() {
   // Placeholder data - in a real app, this would come from your backend
@@ -82,24 +86,10 @@ export default function DashboardPage() {
               <Button className="w-full mt-4">View All Projects</Button>
             </TabsContent>
             <TabsContent value="profile">
-              <h3 className="text-lg font-semibold mb-2">Profile Information</h3>
-              <div className="space-y-2">
-                <p><strong>Name:</strong> {user.name}</p>
-                <p><strong>Username:</strong> @{user.username}</p>
-                <p><strong>Total Projects:</strong> {user.projectCount}</p>
-                <p><strong>Followers:</strong> {user.followerCount}</p>
-                <p><strong>Following:</strong> {user.followingCount}</p>
-              </div>
-              <Button className="w-full mt-4">Edit Profile</Button>
+              <p>Profile content goes here.</p>
             </TabsContent>
             <TabsContent value="settings">
-              <h3 className="text-lg font-semibold mb-2">Account Settings</h3>
-              <div className="space-y-2">
-                <p>Email Notifications: On</p>
-                <p>Two-Factor Authentication: Off</p>
-                <p>Theme: Light</p>
-              </div>
-              <Button className="w-full mt-4">Manage Settings</Button>
+              <p>Settings content goes here.</p>
             </TabsContent>
           </Tabs>
         </CardContent>
