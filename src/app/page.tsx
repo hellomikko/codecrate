@@ -2,8 +2,9 @@
 
 import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { Button } from "@/components/ui/button"
-import { Moon, Sun, Play, Square } from 'lucide-react'
+import { Moon, Sun, Play, Square, GitCommit } from 'lucide-react'
 import CodeMirror from '@uiw/react-codemirror'
 import { javascript } from '@codemirror/lang-javascript'
 import { oneDark } from '@codemirror/theme-one-dark'
@@ -140,9 +141,16 @@ createCosmicNight(document.querySelector('canvas'));`)
               <Image src="/ccColor.png" alt="CodeCrate Logo" layout="fill" />
             </div>
           </div>
-          <Button variant="outline" size="icon" onClick={toggleTheme}>
-            {theme === 'light' ? <Moon className="h-[1.2rem] w-[1.2rem]" /> : <Sun className="h-[1.2rem] w-[1.2rem]" />}
-          </Button>
+          <div className="flex items-center space-x-2">
+            <Link href="/commits">
+              <Button variant="outline" size="icon">
+                <GitCommit className="h-[1.2rem] w-[1.2rem]" />
+              </Button>
+            </Link>
+            <Button variant="outline" size="icon" onClick={toggleTheme}>
+              {theme === 'light' ? <Moon className="h-[1.2rem] w-[1.2rem]" /> : <Sun className="h-[1.2rem] w-[1.2rem]" />}
+            </Button>
+          </div>
         </header>
         
         <main className="flex flex-col md:flex-row items-center justify-between space-y-12 md:space-y-0 md:space-x-12">

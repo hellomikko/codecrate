@@ -52,6 +52,21 @@ const config: Config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Add GitHub-specific colors
+        github: {
+          dark: '#0d1117',
+          light: '#ffffff',
+          border: '#30363d',
+          text: {
+            primary: '#c9d1d9',
+            secondary: '#8b949e',
+          },
+          button: {
+            bg: '#21262d',
+            hover: '#30363d',
+          },
+          link: '#58a6ff',
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
