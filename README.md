@@ -21,7 +21,7 @@
 <br>
 
 <div align="center">
-  <img src="https://github.com/hellomikko/codecrate/raw/main/public/code-snippet-example.png" alt="Code Snippet Example" width="600">
+  <img src="https://github.com/hellomikko/codecrate/blob/main/public/mock_editor.svg" alt="Crate Example" width="1000">
 </div>
 
 ## Features
