@@ -20,7 +20,7 @@
 <br>
 
 <div align="center">
-  <img src="https://github.com/hellomikko/codecrate/blob/main/public/mock_editor.svg" alt="Code Snippet" width="500">
+  <img src="https://github.com/hellomikko/codecrate/blob/main/public/mock_editor.svg" alt="Code Snippet" width="700">
 </div>
 
 ## Features
