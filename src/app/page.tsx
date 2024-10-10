@@ -4,9 +4,9 @@ import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import { Moon, Sun, Play, Square } from 'lucide-react'
-import Prism from 'prismjs'
-import 'prismjs/components/prism-javascript'
-import 'prismjs/themes/prism-tomorrow.css'
+import CodeMirror from '@uiw/react-codemirror'
+import { javascript } from '@codemirror/lang-javascript'
+import { oneDark } from '@codemirror/theme-one-dark'
 
 export default function LandingPage() {
   const [theme, setTheme] = useState('dark')
@@ -62,8 +62,7 @@ createCosmicNight(document.querySelector('canvas'));`)
   useEffect(() => {
     const root = document.documentElement
     root.classList.toggle('dark', theme === 'dark')
-    Prism.highlightAll()
-  }, [theme, code])
+  }, [theme])
 
   useEffect(() => {
     if (canvasRef.current) {
@@ -164,7 +163,9 @@ createCosmicNight(document.querySelector('canvas'));`)
           
           <div className={`md:w-1/2 ${theme === 'dark' ? 'bg-gray-800' : 'bg-gray-100'} rounded-lg shadow-xl overflow-hidden`}>
             <div className={`${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-200'} px-4 py-2 flex justify-between items-center`}>
-              <span className="font-mono text-sm">main.js</span>
+              <span className="font-mono text-sm text-gray-500">
+                {/* src/app/crates/main.js */}
+              </span>
               <div className="flex space-x-2">
                 <Button variant="ghost" size="sm" onClick={runCode}>
                   <Play className="h-4 w-4 mr-2" />
@@ -176,15 +177,13 @@ createCosmicNight(document.querySelector('canvas'));`)
                 </Button>
               </div>
             </div>
-            <div className="p-4 relative">
-              <pre className="language-javascript line-numbers" style={{ margin: 0, maxHeight: '400px', overflow: 'auto' }}>
-                <code>{code}</code>
-              </pre>
-              <textarea
+            <div className="h-[400px] overflow-auto">
+              <CodeMirror
                 value={code}
-                onChange={(e) => setCode(e.target.value)}
-                className="absolute inset-0 w-full h-full opacity-0 resize-none"
-                spellCheck="false"
+                height="400px"
+                theme={theme === 'dark' ? oneDark : 'light'}
+                extensions={[javascript({ jsx: true })]}
+                onChange={(value) => setCode(value)}
               />
             </div>
             {output && (
