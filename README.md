@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://your-image-host.com/ccColor.png" alt="CodeCrate Logo" width="100" height="100">
+  <img src="https://github.com/hellomikko/codecrate/blob/main/public/ccColor.png" alt="CodeCrate Logo" width="100" height="100">
 </div>
 
 <h1 align="center">
@@ -20,7 +20,7 @@
 <br>
 
 <div align="center">
-  <img src="https://your-image-host.com/code-snippet.png" alt="Code Snippet" width="500">
+  <img src="https://github.com/hellomikko/codecrate/blob/main/public/mock_editor.svg" alt="Code Snippet" width="500">
 </div>
 
 ## Features
